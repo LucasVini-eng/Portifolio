@@ -1,104 +1,306 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-BR" class="scroll-smooth">
   
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PORTIFÓLIO</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Lucas Vinicius</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-<body>
-  <header class="header">
-    <div class="menu">
-      <nav class="nav">
-        <a href="#">HOME</a>
-        <a href="https://github.com/ViniDevEng/Portifolio">GITHUB</a>
-        <a href="#contatos">CONTATOS</a>
-        <a href="#">SOBRE MIM</a>
-      </nav>
-    </div>
-
-    <div class="profile">
-      <img src="img/profile/foto_perfil.png" alt="Foto de Perfil" class="profile-img">
-      <h2 class="nome">LUCAS VINICIUS</h2>
-      <h3 class="cargo">DATA ENGINEERING & MANAGEMENT</h3>
-      <h1 class="slogan">"Processos <span class="cor_destaque">ágeis</span>, dados <span class="cor_destaque">seguros</span>, decisões <span class="cor_destaque">estratégicas</span>."</h1>
-    </div>
-  </header>
+<body class="bg-darker">
+  <header class="fixed-top glass-header py-2 py-md-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <div class="container px-3 px-md-5">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-white tracking-tighter" href="#home">
+          <div class="position-relative d-flex align-items-center">
+            <img id="profile-img" class="header-profile-img me-1" 
+                src="/assets/icon-profile/profile.jpeg" 
+                alt="Foto de perfil de Lucas Vinicius"
+                onerror="handleImageError()">
+            <div id="profile-fallback" class="header-profile-fallback me-1">LV</div>
+          </div>
+          <span>Lucas Vinicius</span>
+          <span class="text-accent font-mono d-none d-sm-inline">/&gt;</span>
+        </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="ph ph-list fs-2"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center gap-3 gap-lg-4 mt-3 mt-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-opacity-75" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-opacity-75" href="https://www.linkedin.com/in/lucas-vinicius-ds/">Sobre Mim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-opacity-75" href="#projetos">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-opacity-75" href="#contatos">Contatos</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-outline-custom rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2" href="https://github.com/LucasVini-eng" target="_blank">
+                                <i class="ph ph-github-logo fs-5"></i> GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 <hr>
+    <main>
+      <section id="home" class="hero-section min-vh-100 d-flex align-items-center pt-5 relative">
+        <div class="container px-3 px-md-5 mt-5">
+          <div class="row align-items-center g-5">
+            <div class="col-12 col-md-7 text-center text-md-start animate-slide-up">
+              <p class="text-accent font-mono text-uppercase mb-2 tracking-wider">Engenheiro de Software||Dados</p>
+                <h1 class="display-3 fw-bold text-white lh-sm mb-4">
+                  Construindo o <br/>
+                    <span class="text-accent">futuro digital</span>
+                  </h1>
+              <p class="text-secondary fs-5 mb-5 max-w-lg">
+                  Desenvolvedor apaixonado por arquiteturas escaláveis, dados estruturados e automação de processos eficientes.
+              </p>
+              <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-md-start">
+                <a href="#projetos" class="btn btn-accent px-4 py-3 fw-medium d-inline-flex align-items-center justify-content-center gap-2 rounded">
+                  Ver Projetos <i class="ph ph-arrow-right"></i>
+                </a>
+                <a href="#contatos" class="btn btn-outline-custom px-4 py-3 fw-medium d-inline-flex align-items-center justify-content-center rounded">
+                  Falar Comigo
+                </a>
+              </div>
+            </div>
+                    
+                    <!-- Code Preview (Visible on desktop) -->
+                    <div class="col-12 col-md-5 d-none d-md-block animate-slide-up" style="animation-delay: 0.2s;">
+                        <div class="position-relative">
+                            <div class="position-absolute inset-0 bg-accent opacity-5 blur-3xl rounded-4" style="filter: blur(60px); width: 100%; height: 100%;"></div>
+                            <div class="bg-card border border-white-50 border-opacity-10 rounded-4 p-4 font-mono text-secondary shadow-lg position-relative">
+                                <div class="d-flex gap-2 mb-4">
+                                    <span class="p-1 rounded-circle bg-secondary opacity-50" style="width: 10px; height: 10px; display: inline-block;"></span>
+                                    <span class="p-1 rounded-circle bg-secondary opacity-50" style="width: 10px; height: 10px; display: inline-block;"></span>
+                                    <span class="p-1 rounded-circle bg-secondary opacity-50" style="width: 10px; height: 10px; display: inline-block;"></span>
+                                </div>
+                                <p class="mb-1"><span class="text-accent">const</span> <span class="text-secondary">developer</span> = {</p>
+                                <p class="mb-1 ms-4">name: <span class="text-white">'Lucas Vinicius'</span>,</p>
+                                <p class="mb-1 ms-4">role: <span class="text-white">'Engenheiro de Software'</span>,</p>
+                                <p class="mb-1 ms-4">skills: [<span class="text-white">'Backend'</span>, <span class="text-white">'Data'</span>, <span class="text-white">'RPA'</span>],</p>
+                                <p class="mb-1 ms-4">solveProblems: <span class="text-accent">function</span>() {</p>
+                                <p class="mb-1 ms-5 text-muted">// Código limpo e minimalista</p>
+                                <p class="mb-1 ms-5"><span class="text-white">return</span> <span class="text-accent fw-bold">true</span>;</p>
+                                <p class="mb-1 ms-4">}</p>
+                                <p class="mb-0">};</p>
+                            </div>
+                        </div>
+                    </div>
+          </div>
+        </div>
+      </section>
 
-<div class="titulo-projetos" id="projetos">
-  <h3>PROJETOS E CONSULTORIAS</h3>
-</div>
-<div class="cards-container">
-  <button class="card" onclick="window.location.href='pages/gestao-dados-eng/projetos_gestaodados.html'">
-    <img src="img/icons/icons8-configuração-de-dados-50.png" alt="Engenharia de Dados">
-    <h3>GESTÃO DE DADOS NA NUVEM</h3>
-  </button>
+        <!-- Sobre Mim Section -->
+        <section id="sobre" class="py-5 bg-darker border-top border-secondary border-opacity-10">
+            <div class="container px-3 px-md-5 py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-12 col-md-6">
+                        <h2 class="h1 fw-bold mb-2">Sobre <span class="text-accent">Mim</span></h2>
+                        <div class="bg-accent mb-4 rounded" style="width: 60px; height: 4px;"></div>
+                        <p class="text-secondary fs-6 leading-relaxed mb-4">
+                            Sou um Engenheiro de Software com experiência em desenvolver soluções completas que vão desde APIs escaláveis até pipelines de dados complexos. Acredito que a tecnologia deve servir como um facilitador estratégico para os negócios.
+                        </p>
+                        <p class="text-secondary fs-6 leading-relaxed mb-5">
+                            Minha jornada envolve resolver problemas desafiadores integrando sistemas, automatizando processos repetitivos para ganho de performance (RPA) e estruturando arquiteturas de dados sólidas para análises preditivas e dashboards.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h3 class="h4 fw-semibold mb-4 text-white">Stack Técnica</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <!-- Skill Tags -->
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java / Spring</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">SQL / NoSQL</span>
+                            <span class="skill-tag">Docker & Kubernetes</span>
+                            <span class="skill-tag">AWS / GCP</span>
+                            <span class="skill-tag">Apache Spark</span>
+                            <span class="skill-tag">UiPath / Selenium</span>
+                            <span class="skill-tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <button class="card" onclick="window.location.href='projetos_gestaodados.html'">
-    <img src="img/icons/icons8-bot-50.png" alt="Dashboards">
-    <h3 href="/projetos_principal.html">AUTOMAÇÃO DE PROCESSOS</h3>
-  </button>
-  
-  <button class="card" onclick="window.location.href='projetos_gestaodados.html'">
-    <img src="img/icons/icons8-escudo-de-segurança-verde-50.png" alt="Segurança">
-    <h3>SEGURANÇA DOS DADOS</h3>
-  </button>
-</div>
-<hr>
+        <!-- Projetos Section -->
+        <section id="projetos" class="py-5 bg-dark">
+            <div class="container px-3 px-md-5 py-5">
+                <div class="text-center mb-5">
+                    <h2 class="h1 fw-bold mb-2">Meus <span class="text-accent">Projetos</span></h2>
+                    <div class="bg-accent mx-auto mb-4 rounded" style="width: 60px; height: 4px;"></div>
+                    <p class="text-secondary mx-auto" style="max-width: 600px;">
+                        Explore meus trabalhos recentes filtrados por áreas de atuação.
+                    </p>
+                </div>
 
-<div class="slider-container">
-  <div class="slider-track">
-    <img src="img/icons/icons8-google-cloud-50.png" alt="Google Cloud">
-    <img src="img/icons/icons8-poder-bi-2021-50.png" alt="Microsoft Power BI">
-    <img src="img/icons/icons8-python-50.png" alt="Python">
-    <img src="img/icons/icons8-sql-50.png" alt="sql">
-    <img src="img/icons/icons8-pycharm-50.png" alt="Pycharm">
-    <img src="img/icons/icons8-microsoft-excel-2019-50.png" alt="Excel">
-    <img src="img/icons/icons8-git-50.png" alt="git">
-    <img src="img/icons/icons8-github-50.png" alt="github">
-    <img src="img/icons/icon-databricks.png" alt="databricks">
-    <img src="img/icons/icons8-google-sheets-50.png" alt="GoogleSheets">
+                <!-- Filters -->
+                <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" id="filter-container">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="software">Engenharia de Software</button>
+                    <button class="filter-btn" data-filter="dados">Dados & Analytics</button>
+                    <button class="filter-btn" data-filter="automacao">Automação de Processos</button>
+                </div>
 
-    <img src="img/icons/icons8-google-cloud-50.png" alt="Google Cloud">
-    <img src="img/icons/icons8-poder-bi-2021-50.png" alt="Microsoft Power BI">
-    <img src="img/icons/icons8-python-50.png" alt="Python">
-    <img src="img/icons/icons8-sql-50.png" alt="sql">
-    <img src="img/icons/icons8-pycharm-50.png" alt="Pycham">
-    <img src="img/icons/icons8-microsoft-excel-2019-50.png" alt="Excel">
-    <img src="img/icons/icons8-git-50.png" alt="git">
-    <img src="img/icons/icons8-github-50.png" alt="github">
-    <img src="img/icons/icon-databricks.png" alt="databricks">
-    <img src="img/icons/icons8-google-sheets-50.png" alt="GoogleSheets">
-  </div>
-</div>
-<hr>
+                <!-- Projects Grid -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="projects-grid">
+                    <!-- Projects injected via JS -->
+                </div>
+            </div>
+        </section>
 
-<section class="contact-section" id="contatos">
-  <h2>ENVIE SUA MENSAGEM </h2>
+        <section id="ai-consultor" class="py-5 bg-darker border-top border-secondary border-opacity-10">
+            <div class="container px-3 px-md-5 py-5">
+                <div class="row g-5">
+                    <!-- Left Side: Explanation -->
+                    <div class="col-12 col-lg-5">
+                        <div class="d-flex align-items-center gap-2 text-accent font-mono mb-2">
+                            <i class="ph ph-sparkle fs-4 animate-pulse"></i>
+                            <span class="text-uppercase tracking-wider small">Inteligência Artificial</span>
+                        </div>
+                        <h2 class="h1 fw-bold mb-3">Consultor de <br/><span class="text-accent">Arquitetura IA</span></h2>
+                        <p class="text-secondary leading-relaxed mb-4">
+                            Tem uma ideia de projeto ou um desafio complexo de desenvolvimento, dados ou automação? 
+                            Descreva-o no campo ao lado. Nosso assistente inteligente impulsionado por IA analisará o seu cenário técnico e montará uma proposta inicial estruturada, aplicando o conjunto de tecnologias que domino.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <p class="small text-muted fw-bold text-uppercase tracking-wider mb-2">Sugestões de Desafios:</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="ai-suggestion-badge" onclick="setAiPrompt('Preciso criar um bot de RPA para ler notas fiscais em PDF do portal da prefeitura, extrair dados e salvar em um banco de dados.')">🤖 Automação Fiscal</span>
+                                <span class="ai-suggestion-badge" onclick="setAiPrompt('Tenho um sistema monolítico legado e preciso redesenhá-lo para uma arquitetura ágil e moderna de microsserviços em nuvem.')">🏛️ Redesenhar Legado</span>
+                                <span class="ai-suggestion-badge" onclick="setAiPrompt('Preciso processar terabytes de arquivos de logs diários, estruturá-los para análise e criar um painel dinâmico em tempo real.')">📊 Pipeline Big Data</span>
+                            </div>
+                        </div>
+                    </div>
 
-<form class="contact-form" action="https://formsubmit.co/vinidev.eng@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Seu nome" required>
-  <input type="email" name="email" placeholder="Seu email" required>
-  <textarea name="message" rows="5" placeholder="Digite sua mensagem..." required></textarea>
-  <button type="submit">ENVIAR</button>
-</form>
-</section>
+                    <div class="col-12 col-lg-7">
+                        <div class="ai-glow-card border border-white border-opacity-10 p-4 p-md-5 rounded-4 shadow-sm">
+                            <div class="mb-4">
+                                <label for="ai-prompt-input" class="form-label text-secondary small mb-2">Qual desafio técnico você gostaria de solucionar?</label>
+                                <textarea id="ai-prompt-input" rows="3" class="form-control form-control-custom" placeholder="Ex: Preciso integrar os dados de vendas de 3 plataformas em um único dashboard unificado de forma automatizada..."></textarea>
+                            </div>
+                            
+                            <button id="btn-ai-consult" class="btn btn-accent w-100 py-3 mb-4 d-flex justify-content-center align-items-center gap-2">
+                                <i class="ph ph-sparkle"></i> ✨ Analisar com IA do Lucas
+                            </button>
 
-<footer class="footer">
-  <div class="footer-icons">
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vinidev.eng@gmail.com&su=Olá&body=Mensagem%20automática" target="_blank">
-      <img src="img/icons/icons8-gmail-novo-48.png" alt="Email">
-    </a>
-    <a href="https://www.linkedin.com/in/seuperfil" target="_blank">
-      <img src="img/icons/icons8-linkedin-50.png" alt="LinkedIn">
-    </a>
-  </div>
-  <p class="footer-auth">Desenvolvido por Lucas Vinicius ©2025</p>
-</footer>
-  
+                            <div class="ai-response-box p-4 d-flex flex-column justify-content-center">
+                                <div id="ai-placeholder" class="text-center text-muted my-4">
+                                    <i class="ph ph-cpu fs-1 mb-2 text-accent opacity-50"></i>
+                                    <p class="small mb-0">Aguardando seu desafio técnico para gerar uma proposta técnica detalhada.</p>
+                                </div>
+                                <div id="ai-loader" class="text-center d-none my-4">
+                                    <div class="spinner-ai mb-3"></div>
+                                    <p class="small text-secondary mb-0">Processando desafio e desenhando proposta de arquitetura com o Gemini...</p>
+                                </div>
+                                <div id="ai-response-container" class="d-none">
+                                    <div class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-20 pb-3 mb-3">
+                                        <span class="badge bg-accent bg-opacity-10 text-accent border border-accent-light px-3 py-2 d-inline-flex align-items-center gap-2">
+                                            <i class="ph ph-scroll"></i> Proposta de Arquitetura Gerada
+                                        </span>
+                                        <button class="btn btn-sm btn-outline-custom rounded-pill" onclick="clearAiSession()">
+                                            <i class="ph ph-trash"></i> Limpar
+                                        </button>
+                                    </div>
+                                    <div id="ai-response-text" class="ai-response-content text-secondary"></div>
+                                    
+                                    <div class="border-top border-secondary border-opacity-20 pt-4 mt-4 text-center">
+                                        <p class="small text-muted mb-3">Gostou da proposta de arquitetura de IA? Vamos colocá-la em prática!</p>
+                                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                                            <a id="ai-cta-whatsapp" href="https://wa.me/5511999999999?text=Olá Lucas, utilizei seu Consultor de IA do Portfólio e gostaria de bater um papo sobre uma arquitetura técnica!" target="_blank" class="btn btn-accent px-4 py-2 d-inline-flex align-items-center justify-content-center gap-2">
+                                                <i class="ph ph-whatsapp-logo fs-5"></i> Kickoff no WhatsApp
+                                            </a>
+                                            <a href="#contatos" class="btn btn-outline-custom px-4 py-2">
+                                                Mandar um E-mail
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contatos" class="py-5 bg-darker border-top border-secondary border-opacity-10">
+            <div class="container px-3 px-md-5 py-5">
+                <div class="row g-5">
+                    <div class="col-12 col-md-6">
+                        <h2 class="h1 fw-bold mb-2">Vamos <span class="text-accent">Conversar?</span></h2>
+                        <div class="bg-accent mb-4 rounded" style="width: 60px; height: 4px;"></div>
+                        <p class="text-secondary mb-5 fs-6 leading-relaxed">
+                            Estou aberto a novas oportunidades e desafios. Seja para discutir uma arquitetura complexa, um pipeline de dados ou otimização de rotinas. Sinta-se à vontade para me mandar uma mensagem.
+                        </p>
+
+                        <div class="d-flex flex-column gap-4">
+                            <a href="mailto:seu.email@exemplo.com" class="d-flex align-items-center gap-3 text-secondary text-decoration-none group">
+                                <div class="bg-card border border-white border-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <i class="ph ph-envelope-simple text-white fs-4"></i>
+                                </div>
+                                <div>
+                                    <p class="small text-muted mb-0">Email</p>
+                                    <p class="fw-medium text-white mb-0">seu.email@exemplo.com</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://wa.me/5511999999999" target="_blank" class="d-flex align-items-center gap-3 text-secondary text-decoration-none group">
+                                <div class="bg-card border border-white border-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <i class="ph ph-whatsapp-logo text-white fs-4"></i>
+                                </div>
+                                <div>
+                                    <p class="small text-muted mb-0">WhatsApp</p>
+                                    <p class="fw-medium text-white mb-0">+55 (11) 99999-9999</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="bg-card border border-white border-opacity-10 p-4 p-md-5 rounded-4 shadow-sm">
+                            <form id="contact-form" class="needs-validation">
+                                <div class="mb-4">
+                                    <label for="name" class="form-label text-secondary small mb-2">Nome Completo</label>
+                                    <input type="text" id="name" required class="form-control form-control-custom" placeholder="Ex: Ada Lovelace">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label text-secondary small mb-2">Email</label>
+                                    <input type="email" id="email" required class="form-control form-control-custom" placeholder="seu@email.com">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label text-secondary small mb-2">Mensagem</label>
+                                    <textarea id="message" rows="4" required class="form-control form-control-custom" placeholder="Como posso ajudar no seu projeto?"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-accent w-100 py-3 d-flex justify-content-center align-items-center gap-2">
+                                    Enviar Mensagem <i class="ph ph-paper-plane-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<script src="/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
 
